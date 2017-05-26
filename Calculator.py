@@ -1,5 +1,4 @@
 #!/usr/local/biotools/python/2.7.3/bin/python
-#!//anaconda/bin/python
 
 import argparse
 import sys
