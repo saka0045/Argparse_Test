@@ -28,6 +28,11 @@ parser.add_argument('--multiply',
                     action='store_true',
                     help="Multiply the first and second integers")
 
+parser.add_argument('--divide',
+                    required=False,
+                    action='store_true',
+                    help="Divide the first integer by the second integer")
+
 parser.add_argument('-v', '--verbose',
                     required=False,
                     default=False,
@@ -41,18 +46,21 @@ if args.add:
     print(addint)
     if args.verbose:
         print(str(args.firstint) + ' + ' + str(args.secondint) + ' = ' + str(addint))
-    #sys.exit(1)
 
 if args.subtract:
     subtractint = args.firstint - args.secondint
     print(subtractint)
     if args.verbose:
         print(str(args.firstint) + ' - ' + str(args.secondint) + ' = ' + str(subtractint))
-    #sys.exit(1)
 
 if args.multiply:
     multiplyint = args.firstint * args.secondint
     print(multiplyint)
     if args.verbose:
         print(str(args.firstint) + ' x ' + str(args.secondint) + ' = ' + str(multiplyint))
-    #sys.exit(1)
+
+if args.divide:
+    divideint = args.firstint / args.secondint
+    print(divideint)
+    if args.verbose:
+        print(str(args.firstint) + ' / ' + str(args.secondint) + ' = ' + str(divideint))
