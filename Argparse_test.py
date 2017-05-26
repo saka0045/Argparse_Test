@@ -1,6 +1,7 @@
 #!/usr/local/biotools/python/2.7.3/bin/python
 
 import argparse
+import sys
 
 parser = argparse.ArgumentParser()
 
