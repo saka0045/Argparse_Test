@@ -3,7 +3,7 @@
 import argparse
 import sys
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(description='Basic calculator function. Requires two integers')
 
 parser.add_argument('firstint',
                     type=int,
@@ -41,16 +41,18 @@ if args.add:
     print(addint)
     if args.verbose:
         print(str(args.firstint) + ' + ' + str(args.secondint) + ' = ' + str(addint))
-    sys.exit(1)
+    #sys.exit(1)
 
 if args.subtract:
     subtractint = args.firstint - args.secondint
     print(subtractint)
-    sys.exit(1)
+    if args.verbose:
+        print(str(args.firstint) + ' - ' + str(args.secondint) + ' = ' + str(subtractint))
+    #sys.exit(1)
 
 if args.multiply:
     multiplyint = args.firstint * args.secondint
     print(multiplyint)
-    sys.exit(1)
-
-print('What do you want to do with these numbers??')
+    if args.verbose:
+        print(str(args.firstint) + ' x ' + str(args.secondint) + ' = ' + str(multiplyint))
+    #sys.exit(1)
