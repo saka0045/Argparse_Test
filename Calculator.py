@@ -60,7 +60,7 @@ if args.multiply:
         print(str(args.firstint) + ' x ' + str(args.secondint) + ' = ' + str(multiplyint))
 
 if args.divide:
-    divideint = args.firstint / args.secondint
+    divideint = float(args.firstint) / float(args.secondint)
     print(divideint)
     if args.verbose:
         print(str(args.firstint) + ' / ' + str(args.secondint) + ' = ' + str(divideint))
